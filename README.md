@@ -19,3 +19,25 @@ Download sticker as zip:
 ```sh
 python main.py 8941816
 ```
+
+## Development
+
+Use `venv`:
+
+```sh
+python3 -m venv venv
+source ./venv/bin/activate
+```
+
+Install `requests`, `black`, `isort`:
+
+```sh
+python3 -m pip install requests black isort
+```
+
+After editing, formatting source codes:
+
+```sh
+black .
+isort .
+```
