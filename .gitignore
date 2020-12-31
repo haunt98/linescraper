@@ -1,7 +1,14 @@
+# macOS
+.DS_Store
+
+# IntelliJ
+.idea/
+
+# VSCode
+.vscode/
+
 # Python
 venv
 
-# VSCode
-.vscode
-
+# Output
 *.zip
