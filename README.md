@@ -8,9 +8,9 @@ For research purpose only.
 
 ## Guide
 
-Example with [Peach Cat 4(JPN)](https://store.line.me/stickershop/product/8941816/en):
+Example with [Peach Cat 4(JPN)](https://store.line.me/stickershop/product/8941816/en).
 
-URL is `https://store.line.me/stickershop/product/8941816/en` so the ID is `8941816`
+URL is `https://store.line.me/stickershop/product/8941816/en` so the ID is `8941816`.
 
 Download sticker as zip:
 
