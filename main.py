@@ -7,17 +7,25 @@ BASE_URL = (
 )
 
 
+DEFAULT_OUTPUT_NAME = "output"
+
+BASE_OUTPUT = "%s.zip"
+
+
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("id", help="line sticker id")
+    parser = argparse.ArgumentParser(description="download line sticker as zip")
+    parser.add_argument("id", help="sticker id")
+    parser.add_argument("--name", help="output name", default=DEFAULT_OUTPUT_NAME)
     args = parser.parse_args()
 
     url = BASE_URL % args.id
-    print("url", url)
+    print("downloading %s" % url)
 
     rsp = requests.get(url)
     if rsp.status_code == 200:
-        with open("%s.zip" % args.id, "wb") as f:
+        output = BASE_OUTPUT % args.name
+        print("saving %s" % output)
+        with open(output, "wb") as f:
             f.write(rsp.content)
     else:
         print("failed with status", rsp.status_code)
