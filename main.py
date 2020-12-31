@@ -16,12 +16,11 @@ def main():
     print("url", url)
 
     rsp = requests.get(url)
-
     if rsp.status_code == 200:
         with open("%s.zip" % args.id, "wb") as f:
             f.write(rsp.content)
     else:
-        print("code", rsp.status_code)
+        print("failed with status", rsp.status_code)
 
 
 if __name__ == "__main__":
